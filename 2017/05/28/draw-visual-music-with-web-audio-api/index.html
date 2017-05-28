@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言Web Audio API是html5提供的对音频处理的接口。乍看起来，好像很高端的样子，其实我们早已经使用过Web API了，比如说前端开发绕不开的DOM（文档对象模型-Document Object Model）。DOM提供了一系列API让我们可以操作文档中的节点（Node）与元素（Element）。当然现在很多轮子的出现使我们不再直接来操作DOM，但这些轮子本质上也是对DOM API的封">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/05/28/draw-visual-music-with-web-audio-api/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言Web Audio API是html5提供的对音频处理的接口。乍看起来，好像很高端的样子，其实我们早已经使用过Web API了，比如说前端开发绕不开的DOM（文档对象模型-Document Object Model）。DOM提供了一系列API让我们可以操作文档中的节点（Node）与元素（Element）。当然现在很多轮子的出现使我们不再直接来操作DOM，但这些轮子本质上也是对DOM API的封">
+<meta property="og:image" content="http://www.chunqiuyiyu.com/usr/uploads/2017/04/2057102376.png">
+<meta property="og:image" content="http://www.chunqiuyiyu.com/usr/uploads/2017/04/1877352814.png">
+<meta property="og:updated_time" content="2017-04-03T06:39:29.872Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="前言Web Audio API是html5提供的对音频处理的接口。乍看起来，好像很高端的样子，其实我们早已经使用过Web API了，比如说前端开发绕不开的DOM（文档对象模型-Document Object Model）。DOM提供了一系列API让我们可以操作文档中的节点（Node）与元素（Element）。当然现在很多轮子的出现使我们不再直接来操作DOM，但这些轮子本质上也是对DOM API的封">
+<meta name="twitter:image" content="http://www.chunqiuyiyu.com/usr/uploads/2017/04/2057102376.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS-каналы"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Поиск"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-draw-visual-music-with-web-audio-api" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/05/28/draw-visual-music-with-web-audio-api/" class="article-date">
+  <time datetime="2017-05-28T02:25:34.482Z" itemprop="datePublished">2017-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Web Audio API是html5提供的对音频处理的接口。乍看起来，好像很高端的样子，其实我们早已经使用过Web API了，比如说前端开发绕不开的DOM（文档对象模型-Document Object Model）。DOM提供了一系列API让我们可以操作文档中的节点（Node）与元素（Element）。当然现在很多轮子的出现使我们不再直接来操作DOM，但这些轮子本质上也是对DOM API的封装，比如说大名鼎鼎的jquery。</p>
+<p>类似于DOM，Web Audio API提供了丰富的API来让我们操作音频。时代已经变了，在现在的Web页面中，简简单单的播放音乐已经不能满足人们的需求了，我们要对音频文件进行各种处理，让用户得到更好的体验，比如说这篇文章提到的绘制可视化的音乐，即绘制音乐的频谱。</p>
+<h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><p>首先要了解频谱是什么？频谱是频率谱密度的简称，是频率的分布曲线。我们知道，声音是由振动产生的，频率则用来描述振动的快慢，在人耳可以听到的范围（20Hz~20000Hz）内，频率越高的声音越尖，频率越低的声音越沉。主观上的感受大家都不一样，但我们可以用客观数据来量化这种感受。首先对连续的音频信息进行采样，得到不连续的频率值，然后绘制出来，就形成了频道图。当我们看着高低起伏的频道图，听着音乐中的高低音，对应起来，对整个音乐的体验与理解就是多方位的。至于这首音乐是否好听，就是很主观的了，这里只是对频率上的分析。</p>
+<p>对Web开发者来说，上面的知识已经足够了，说实话，我对这些知识的了解也是半调子，毕竟我不是专业人员。在Web Audio API中，需要重点关注的是音频环境（AudioContext），所有的音频处理必须在这个环境中进行。一个简单、典型的工作流应该是这样的：</p>
+<ol>
+<li>创建音频环境</li>
+<li>在音频环境里创建源 - 本例子中使用<code>audio</code>标签引入的音频数据</li>
+<li>创建效果节点 - 采样得到频率数据</li>
+<li>为音频选择一个目地 - 以60FPS绘制频率数据到<code>canvas</code>中</li>
+<li>连接源到效果器，以及效果器和目地</li>
+</ol>
+<p>图示说明，来自Mozilla开发者文档。顺便说一句，虽然我的前端技术启蒙地是在<a href="http://www.w3school.com.cn/index.html" target="_blank" rel="external">W3school</a>，但是我觉得学习前端最好的文档应该是<a href="https://developer.mozilla.org/zh-CN/docs/Web" target="_blank" rel="external">Mozilla技术文档</a>。W3school中的东西对于初学者来说当然好，简单方便，还可以在线运行代码。但是要想深刻理解学习前端最新、最全面的技术，MDN（Mozilla开发者文档）是首选。<br><img src="http://www.chunqiuyiyu.com/usr/uploads/2017/04/2057102376.png" alt="web-audio-api-flowchart.png"></p>
+<h2 id="代码梳理"><a href="#代码梳理" class="headerlink" title="代码梳理"></a>代码梳理</h2><p>我们需要html结构来承载音乐源与输出频谱图，只是一个简单的示例页面，没有做样式上的调整，要注意默认的<code>canvas</code>标签是有宽高的（300x150）。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"mp3_player"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"audio_box"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"analyser_render"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>页面加载完成后，创建音频环境，创建频谱分析节点，创建音频源，然后连接源到分析节点，连接分析节点到音频环境中所有音频（节点）的最终目标节点，一般是音频渲染设备，比如扬声器（于是我们听到了美妙的音乐），最后通过音乐中的频率数据在<code>frameLooper()</code>函数绘制。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'audio_box'</span>).appendChild(audio);</div><div class="line"><span class="comment">// AudioContext object instance</span></div><div class="line">context = <span class="keyword">new</span> AudioContext();</div><div class="line"><span class="comment">// AnalyserNode method</span></div><div class="line">analyser = context.createAnalyser(); </div><div class="line">canvas = <span class="built_in">document</span>.getElementById(<span class="string">'analyser_render'</span>);</div><div class="line">ctx = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line"><span class="comment">// Re-route audio playback into the processing graph of the AudioContext</span></div><div class="line">source = context.createMediaElementSource(audio);</div><div class="line">source.connect(analyser);</div><div class="line">analyser.connect(context.destination);</div><div class="line">frameLooper();</div></pre></td></tr></table></figure></p>
+<p><code>frameLooper()</code>中，用<code>requestAnimationFrame</code>实现60FPS的循环绘制。使用分析节点的<code>frequencyBinCount</code>得到绘制的数据值的数量，用<code>Uint8Array</code>储存这些数据。<code>Uint8Array</code>数组类型表示一个8位无符号整型数组，创建时内容被初始化为0。相较于普通无类型的<code>Array</code>，<code>Uint8Array</code>能更加快速高效地存储与处理二进制数据，广泛应用于文件数据以及WebGL中着色器数据的操作中。</p>
+<p>分析节点<code>analyser</code>的<code>getByteFrequencyData()</code>方法将当前频率数据复制到传入其中的无符号整型数组。它的<code>frequencyBinCount</code>属性是<code>fftSize</code>属性的一半。<code>fftSize</code>属性的值是一个无符号长整型的值, 用于确定频域的FFT(快速傅里叶变换)的大小，范围是从32到32768内的2的非零幂，其默认值为2048。所以此时<code>fbc_array</code>存储有1024个数据，每一个数据就是我们所需要的频率大小。最后在循环中将前100个数据绘制到<code>canvas</code>中，至此收工。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">requestAnimationFrame(frameLooper);</div><div class="line">fbc_array = <span class="keyword">new</span> <span class="built_in">Uint8Array</span>(analyser.frequencyBinCount);</div><div class="line">analyser.getByteFrequencyData(fbc_array);</div><div class="line"><span class="comment">// Clear the canvas</span></div><div class="line">ctx.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</div><div class="line"><span class="comment">// Color of the bars</span></div><div class="line">ctx.fillStyle = <span class="string">'#00CCFF'</span>; </div><div class="line">bars = <span class="number">100</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; bars; i++) &#123;</div><div class="line">    bar_x = i * <span class="number">4</span>;</div><div class="line">    bar_width = <span class="number">2</span>;</div><div class="line">    bar_height = -(fbc_array[i] / <span class="number">2</span>);</div><div class="line">    <span class="comment">//  fillRect( x, y, width, height ) // Explanation of the parameters below</span></div><div class="line">    ctx.fillRect(bar_x, canvas.height, bar_width, bar_height);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>绘制出的频谱如下，这是其中截取的一帧（示例音乐是贝多芬著名的作品第五交响曲，也被称为命运交响曲，看着上下起伏的频谱图，听着激昂的音乐，有没有觉得作者紧紧地扼住了命运的喉咙呢？）：<br><img src="http://www.chunqiuyiyu.com/usr/uploads/2017/04/1877352814.png" alt="music-analyser.png"></p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://github.com/chunqiuyiyu/learn-javascript/tree/master/music-analyser" target="_blank" rel="external">源码</a><br><a href="http://www.chunqiuyiyu.com/usr/uploads/demos/music-analyser/index.html" target="_blank" rel="external">效果演示</a></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这篇文章用到的一些预备知识。，其实在大学的《信息论》和《数字信号处理》中就已经学过，但是到现在要用的时候，早已忘得七七八八了，大学的时候，只是应付老师与考试，到头来，谁都没应付过去，只应付到了自己。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/05/28/draw-visual-music-with-web-audio-api/" data-id="cj383268y00015cukd9g2weit" class="article-share-link">Поделиться</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/28/writing-a-pong-game-in-es6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Следующий</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/05/28/newsreader-simple-information-reader/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Предыдущий</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Архив</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Недавние записи</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/28/writing-a-pong-game-in-es6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/28/draw-visual-music-with-web-audio-api/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/28/newsreader-simple-information-reader/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/28/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Создано с помощью <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
