@@ -4,9 +4,7 @@
 
 ## 预览
 
-[Demo](http://chunqiuyiyu.github.io/hexo-theme-polk/)
-
-![preview](preview/preview.png)
+[Demo](https://chunqiuyiyu.github.io/)
 
 ## 安装
 
