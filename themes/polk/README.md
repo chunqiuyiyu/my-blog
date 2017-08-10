@@ -1,2 +1,37 @@
-# theme-example
-文章 [从零开始制作 Hexo 主题](http://www.ahonn.me/2016/12/15/create-a-hexo-theme-from-scratch/) 中的 Hexo 主题例子。
+# Polk
+
+极简的 Hexo 博客主题，专注于内容展现。
+
+## 预览
+
+[Demo](http://chunqiuyiyu.github.io/hexo-theme-polk/)
+
+![preview](preview/preview.png)
+
+## 安装
+
+```shell
+cd your-blog
+git clone https://github.com/chunqiuyiyu/hexo-theme-polk themes/polk
+```
+
+修改博客目录下的 `_config.yml` ，将 `theme` 配置项的值改为 `polk`（默认值为 `landscape`）。同时，为了更好的显示效果，请将页面渲染文章数量 `per_page` 改为 20（默认为 10）。
+
+## 更新
+
+```shell
+cd themes/typing
+git pull
+```
+
+## 浏览器支持
+- Internet Explorer 9+
+- Firefox
+- Opera
+- Chrome
+- Safari
+- Edge
+
+## 开源协议
+
+[MIT](LICENSE)
