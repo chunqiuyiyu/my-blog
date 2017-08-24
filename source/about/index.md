@@ -1,5 +1,6 @@
 ---
-title: About
+title: 关于
+slug: About
 date: 2017-08-10 20:50:44
 ---
 
