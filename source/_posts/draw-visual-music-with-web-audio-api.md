@@ -5,7 +5,7 @@ tags: [HTML5, JavaScript, Web]
 ---
 ## 前言
 
-Web Audio API是html5提供的对音频处理的接口。乍看起来，好像很高端的样子，其实我们早已经使用过Web API了，比如说前端开发绕不开的DOM（文档对象模型-Document Object Model）。DOM提供了一系列API让我们可以操作文档中的节点（Node）与元素（Element）。当然现在很多轮子的出现使我们不再直接来操作DOM，但这些轮子本质上也是对DOM API的封装，比如说大名鼎鼎的jquery。
+Web Audio API 是 html5 提供的对音频处理的接口。乍看起来，好像很高端的样子，其实我们早已经使用过Web API了，比如说前端开发绕不开的DOM（文档对象模型-Document Object Model）。DOM提供了一系列API让我们可以操作文档中的节点（Node）与元素（Element）。当然现在很多轮子的出现使我们不再直接来操作DOM，但这些轮子本质上也是对DOM API的封装，比如说大名鼎鼎的jquery。
 
 
 <!--more-->
