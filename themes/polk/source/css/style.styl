@@ -61,11 +61,30 @@ a {
 
 .page {
   margin: 0 20px;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   
   p {
     line-height: 1.5em;
   }
+  
+  .page-footer {
+    
+    a {
+      color: #666;
+
+      &:hover {
+        color: #000;
+      }
+    }
+    
+    .top {
+      float: right;
+    }
+  }
+}
+
+#hashover {
+  margin-top: 1em;
 }
 
 @import "_partial/header";

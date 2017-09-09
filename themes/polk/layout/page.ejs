@@ -1,10 +1,39 @@
 <%- partial('_partial/header') %>
-<section class="page">
+<div class="page">
   <div class="page-title">
     <h1 class="article-title"><%= page.slug %></h1>
   </div>
   <div class="page-content">
     <%- page.content %>
   </div>
-</section>
+  <div class="page-footer">
+    <a href="javascript:void(0)" class="load"><%= __('Post.Load') %></a>
+    <a href="#top" class="top"><%= __('Post.Top') %></a>
+  </div>
+</div>
+<script>
+  (function(){
+    if (localStorage.getItem('hashover') === location.href.replace(location.hash, '')) {
+      loadComments();
+    }
+    
+    var dom = document.getElementsByClassName('load')[0];
+    dom.addEventListener('click', function(){
+      loadComments();
+    });
+
+    function loadComments() {
+      if (!document.getElementById('comment-script')) {
+        var page = document.getElementsByClassName('page')[0];
+        var script = document.createElement('script');
+        script.src = '/hashover/hashover.js';
+        script.id = 'comment-script'
+        script.asyc = true;
+
+        page.appendChild(script);
+        localStorage.setItem('hashover', location.href.replace(location.hash, ''));
+      }
+    }
+  })();
+</script>
 <%- partial('_partial/footer') %>
