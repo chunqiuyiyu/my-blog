@@ -39,7 +39,7 @@ this.setState((prevState, props) => ({
 ```
 ### 事件处理
 如果事件处理函数中需要调用 this，请在构造函数中绑定防止 this 丢失，或者使用自动绑定 this 的箭头函数。
-```
+```JavaScript
 class Switcher extends React.Component {
   constructor(props) {
     this._buttonClick = this._handleButtonClick.bind(this);
@@ -48,7 +48,7 @@ class Switcher extends React.Component {
 ```
 ### 获取组件
 有时我们需要得到渲染后的组件实例，这时请使用`ref`设置回调函数。当组件挂载后，回调参数传入组件实例，组件卸载后或者`ref` 属性改变时，回调参数传入`null`，避免内存泄露。`ref`还可以设置为字符串`ref="input"`，然后通过`this.refs.input`访问。使用回调函数设置组件是获取组件的推荐方法，React 自动完成获取到组件的生命周期管理，不需人为干预。
-```
+```JavaScript
 <input ref={el=> { this.el = el; }} />
 ```
 ## 后记
