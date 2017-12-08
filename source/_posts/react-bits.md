@@ -15,7 +15,7 @@ const sampleComponent = () => {
 };
 ```
 如果条件比较复杂，短路运算和问号运算符就不够用了，这时就要考虑是否应该拆分此组件，或者使用立即执行的函数表达式或者提前返回，以保证代码的清晰可读为准。
-```JavaScript
+```js
 const sampleComponent = () => {
   const basicCondition = flag && flag2 && !flag3;
   if (!basicCondition) return <p>Derp</p>;
