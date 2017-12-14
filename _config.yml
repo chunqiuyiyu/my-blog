@@ -56,6 +56,7 @@ index_generator:
 default_category: uncategorized
 category_map:
 tag_map:
+  书籍: books
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
