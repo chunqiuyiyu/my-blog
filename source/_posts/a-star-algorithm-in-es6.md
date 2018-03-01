@@ -1,5 +1,5 @@
 ---
-title: es6 实现 A 星寻路算法
+title: ES6 实现 A 星寻路算法
 date: 2017-06-06 22:59
 tags: [游戏, JavaScript, ES6, HTML5, 算法]
 ---
