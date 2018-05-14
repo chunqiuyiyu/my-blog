@@ -11,10 +11,11 @@ date: 2017-08-10 20:50:44
 
 ## 联系我
 GitHub：[chunqiuyiyu][6]
+
 邮箱：chunqiuyiyu#outlook.com
 
 ## 建站记
-* 2018-5-12 评论系统从 [Hashover][7] 更换为 Commento[8]
+* 2018-5-12 评论系统从 [Hashover][7] 更换为 [Commento][8]
 * 2017-9-12 [博客从 Typecho 迁移到 Hexo][9]
 
 
