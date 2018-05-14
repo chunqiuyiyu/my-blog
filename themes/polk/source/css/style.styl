@@ -67,6 +67,27 @@ a {
   p {
     line-height: 1.5em;
   }
+
+  .page-content {
+    text-align: justify;
+
+    a {
+      color: #d94240;
+      border-bottom: 1px dotted;
+
+      &:hover {
+        border-bottom: 1px solid;
+      }
+    }
+
+    ul, ol {
+      text-align: left;
+
+      li {
+        padding: 5px;
+      }
+    }
+  }
   
   .page-footer {
     
@@ -82,10 +103,6 @@ a {
       float: right;
     }
   }
-}
-
-#hashover {
-  margin-top: 1em;
 }
 
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */

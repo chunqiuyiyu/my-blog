@@ -8,7 +8,6 @@ date: 2018-05-14 15:38:44
 
 ## 了解我
 [书香乾坤赴][1]
-
 [乐袅心弦枯][2]
 
 
@@ -24,8 +23,13 @@ GitHub：[chunqiuyiyu][6]
 邮箱：chunqiuyiyu#outlook.com
 
 ## 建站记
-* 2018-5-12 评论系统从 [Hashover][7] 更换为 [Commento][8]
-* 2017-9-12 [博客从 Typecho 迁移到 Hexo][9]
+并不完整，很多信息已经丢失。过去的一些事情，我已经遗忘了，可以遗忘的，已经不重要了。
+
+* 2018-05-12 评论系统从 [Hashover][7] 更换为 [Commento][8]
+* 2017-09-12 [博客从 Typecho 迁移到 Hexo][9]
+* 2016-04-22 找回写博客的初心
+* 2016-03-24 购买并启用域名：www.chunqiuyiyu.com
+* 2015-03-02 博客上线 
 
 
   [1]: http://www.chunqiuyiyu.com/tags/books/
