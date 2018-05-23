@@ -29,7 +29,7 @@ GitHub：[chunqiuyiyu][6]
 * 2017-09-12 [博客从 Typecho 迁移到 Hexo][9]
 * 2016-04-22 找回写博客的初心
 * 2016-03-24 购买并启用域名：www.chunqiuyiyu.com
-* 2015-03-02 博客上线 
+* 2015-03-02 博客上线，部署于新浪云引擎(SAE)
 
 
   [1]: http://www.chunqiuyiyu.com/tags/books/
