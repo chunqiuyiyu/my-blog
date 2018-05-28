@@ -12,28 +12,5 @@
   </div>
 </div>
 <script>
-  (function(){
-    if (localStorage.getItem('hashover') === location.href.replace(location.hash, '')) {
-      loadComments();
-    }
-    
-    var dom = document.getElementsByClassName('load')[0];
-    dom.addEventListener('click', function(){
-      loadComments();
-    });
-
-    function loadComments() {
-      if (!document.getElementById('comment-script')) {
-        var page = document.getElementsByClassName('page')[0];
-        var script = document.createElement('script');
-        script.src = '/hashover/hashover.js';
-        script.id = 'comment-script'
-        script.asyc = true;
-
-        page.appendChild(script);
-        localStorage.setItem('hashover', location.href.replace(location.hash, ''));
-      }
-    }
-  })();
 </script>
 <%- partial('_partial/footer') %>
