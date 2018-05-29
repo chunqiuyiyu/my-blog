@@ -25,7 +25,7 @@ GitHub：[chunqiuyiyu][6]
 ## 建站记
 并不完整，很多信息已经丢失。过去的一些事情，我已经遗忘了，可以遗忘的，已经不重要了。
 
-* 2018-05-29 更换虚拟主机，启用 [Webhooks][10] 自动部署博客
+* 2018-05-29 更换虚拟主机，启用 [Webhooks][10] 自动部署博客，评论系统更改为 [Isso][11]
 * 2018-05-12 评论系统从 [Hashover][7] 更换为 [Commento][8]
 * 2017-09-12 [博客从 Typecho 迁移到 Hexo][9]
 * 2016-04-22 找回写博客的初心
@@ -43,3 +43,5 @@ GitHub：[chunqiuyiyu][6]
   [8]: https://github.com/adtac/commento
   [9]: http://www.chunqiuyiyu.com/2017/09/migrate-blog-from-typecho-to-hexo.html
   [10]: https://developer.github.com/webhooks/
+  [11]: https://github.com/posativ/isso
+  
