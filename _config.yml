@@ -59,6 +59,7 @@ tag_map:
   书籍: books
   碎语: word
   游戏: game
+  算法: algorithm
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
