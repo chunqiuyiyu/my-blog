@@ -25,6 +25,7 @@ GitHub：[chunqiuyiyu][6]
 ## 建站记
 并不完整，很多信息已经丢失。过去的一些事情，我已经遗忘了，可以遗忘的，已经不重要了。
 
+* 2018-06-07 换回原有主机商并更换 IP 地址
 * 2018-05-29 更换虚拟主机，启用 [Webhooks][10] 自动部署博客，评论系统更改为 [Isso][11]
 * 2018-05-12 评论系统从 [Hashover][7] 更换为 [Commento][8]
 * 2017-09-12 [博客从 Typecho 迁移到 Hexo][9]
@@ -37,7 +38,7 @@ GitHub：[chunqiuyiyu][6]
   [2]: http://www.chunqiuyiyu.com/music/
   [3]: http://www.chunqiuyiyu.com/tags/word/
   [4]: http://www.chunqiuyiyu.com/tags/game/
-  [5]: http://www.chunqiuyiyu.com/project-list/
+  [5]: http://www.chunqiuyiyu.com/project/
   [6]: https://github.com/chunqiuyiyu
   [7]: https://github.com/jacobwb/hashover-next
   [8]: https://github.com/adtac/commento
