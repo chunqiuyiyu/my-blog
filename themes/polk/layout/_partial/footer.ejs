@@ -1,3 +1,38 @@
+<script type="text/javascript">
+  window.onload = function() {
+    // Load comment
+    document.getElementsByClassName('load')[0].addEventListener('click', function() {
+      if (!document.getElementById('issoScript')) {
+        script = document.createElement('script');
+        script.id = 'issoScript';
+        script.src = 'http://www.chunqiuyiyu.com/isso/js/embed.min.js';
+        script.setAttribute('data-isso', 'http://www.chunqiuyiyu.com/isso/');
+        script.setAttribute('data-isso-vote', 'false');
+        script.setAttribute('data-isso-css', 'false');
+        script.asyc = true;
+
+        document.body.appendChild(script);
+      }
+    });
+
+    // Go top
+    document.getElementsByClassName('top')[0].addEventListener('click', function() {
+      var d = document,
+          dd = document.documentElement,
+          db = document.body,
+          top = dd.scrollTop || db.scrollTop,
+          step = Math.floor(top / 10);
+
+     (function() {
+         top -= step;
+         if (top > -step) {
+             dd.scrollTop == 0 ? db.scrollTop = top: dd.scrollTop = top;
+             setTimeout(arguments.callee, 10);
+         }
+     })();
+    });
+  }
+</script>
 <footer>
   &copy; <%= date(new Date(), 'YYYY') %>
   <span class="author">
