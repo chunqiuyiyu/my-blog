@@ -1,7 +1,7 @@
 <script type="text/javascript">
   window.onload = function() {
     // Load comment
-    document.getElementsByClassName('load')[0].addEventListener('click', function() {
+    document.getElementsByClassName('load')[0] && document.getElementsByClassName('load')[0].addEventListener('click', function() {
       if (!document.getElementById('issoScript')) {
         script = document.createElement('script');
         script.id = 'issoScript';
@@ -16,7 +16,7 @@
     });
 
     // Go top
-    document.getElementsByClassName('top')[0].addEventListener('click', function() {
+    document.getElementsByClassName('load')[0] && document.getElementsByClassName('top')[0].addEventListener('click', function() {
       var d = document,
           dd = document.documentElement,
           db = document.body,
