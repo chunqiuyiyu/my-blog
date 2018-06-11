@@ -19,33 +19,9 @@
     
     <div>
       <a href="javascript:void(0)" class="load"><%= __('Post.Load') %></a>
-      <a href="#top" class="top"><%= __('Post.Top') %></a>
+      <a href="javascript:void(0)" class="top"><%= __('Post.Top') %></a>
     </div>
+    <section id="isso-thread"></section>
   </div>
 </article>
-<script>
-  (function(){
-    if (localStorage.getItem('hashover') === location.href.replace(location.hash, '')) {
-      loadComments();
-    }
-    
-    var dom = document.getElementsByClassName('load')[0];
-    dom.addEventListener('click', function(){
-      loadComments();
-    });
-
-    function loadComments() {
-      if (!document.getElementById('comment-script')) {
-        var article = document.getElementsByTagName('article')[0];
-        var script = document.createElement('script');
-        script.src = '/hashover/hashover.js';
-        script.id = 'comment-script'
-        script.asyc = true;
-
-        article.appendChild(script);
-        localStorage.setItem('hashover', location.href.replace(location.hash, ''));
-      }
-    }
-  })();
-</script>
 <%- partial('_partial/footer') %>
