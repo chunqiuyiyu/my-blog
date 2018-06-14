@@ -1,18 +1,18 @@
 <script type="text/javascript">
   window.onload = function() {
     // Load comment
+    var script = document.createElement('script');
+    script.id = 'hashoverScript';
+    script.src = 'http://www.chunqiuyiyu.com/hashover/comments.php';
+    script.asyc = true;
+
+    var parent = document.getElementsByClassName('page')[0] || 
+      document.getElementsByClassName('post')[0] || document.body;
+
+    parent.appendChild(script);
     document.getElementsByClassName('load')[0] && document.getElementsByClassName('load')[0].addEventListener('click', function() {
-      if (!document.getElementById('hashoverScript')) {
-        var script = document.createElement('script');
-        script.id = 'hashoverScript';
-        script.src = 'http://www.chunqiuyiyu.com/hashover/comments.php';
-        script.asyc = true;
-
-        var parent = document.getElementsByClassName('page')[0] || 
-          document.getElementsByClassName('post')[0] || document.body;
-
-        parent.appendChild(script);
-        setTimeout(function(){ var hashover = new HashOver(); }, 0);
+      if (document.getElementById('hashoverScript')) {
+        var hashover = new HashOver();
       }
     });
 
