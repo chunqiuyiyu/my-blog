@@ -11,7 +11,6 @@
             document.getElementsByClassName('post')[0] || document.body;
 
           parent.appendChild(script);
-        var hashover = new HashOver();
       }
     });
 
@@ -31,6 +30,8 @@
          }
      })();
     });
+    
+    window.onload = function() {        var hashover = new HashOver();}
 </script>
 <footer>
   &copy; <%= date(new Date(), 'YYYY') %>
