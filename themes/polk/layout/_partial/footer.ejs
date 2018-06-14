@@ -12,7 +12,7 @@
           document.getElementsByClassName('post')[0] || document.body;
 
         parent.appendChild(script);
-        var hashover = new HashOver();
+        setTimeout(function(){ var hashover = new HashOver(); }, 0);
       }
     });
 
