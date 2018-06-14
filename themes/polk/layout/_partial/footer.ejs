@@ -2,7 +2,6 @@
   window.onload = function() {
     // Load comment
     var script = document.createElement('script');
-    script.id = 'hashoverScript';
     script.src = 'http://www.chunqiuyiyu.com/hashover/comments.php';
     script.asyc = true;
 
@@ -11,7 +10,7 @@
 
     parent.appendChild(script);
     document.getElementsByClassName('load')[0] && document.getElementsByClassName('load')[0].addEventListener('click', function() {
-      if (!document.getElementById('hashoverScript')) {
+      if (!document.getElementById('hashover')) {
         var hashover = new HashOver();
       }
     });
