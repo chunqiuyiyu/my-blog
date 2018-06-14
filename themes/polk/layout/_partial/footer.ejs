@@ -11,7 +11,7 @@
 
     parent.appendChild(script);
     document.getElementsByClassName('load')[0] && document.getElementsByClassName('load')[0].addEventListener('click', function() {
-      if (document.getElementById('hashoverScript')) {
+      if (!document.getElementById('hashoverScript')) {
         var hashover = new HashOver();
       }
     });
