@@ -77,7 +77,12 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: polk
-tagslug: true
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

@@ -1,0 +1,21 @@
+<div class="page">
+  <h1>Nav</h1>
+  <div class="search">
+    <input type="text" name="search" placeholder="搜索" id="local-search-input">
+    <div id="local-search-result"></div>
+  </div>
+  
+  <div class="statis">已有 <%- site.posts.length %> 篇文章，共计 <%- site.tags.length %> 个标签</div>
+  <div class="tag">
+    <div class="title">标签</div>
+    <div class="tagcloud">
+      <%- tagcloud(site.tags, {
+          min_font: 15, 
+          max_font: 30,  
+          color: true, 
+          start_color: 'gray', 
+          end_color: 'black',
+      }) %>
+    </div>
+  </div>
+</div>

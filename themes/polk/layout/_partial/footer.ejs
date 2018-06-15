@@ -1,38 +1,6 @@
 <script type="text/javascript">
-  window.onload = function() {
-    // Load comment
-    var script = document.createElement('script');
-    script.id = 'hashoverScript';
-    script.src = 'http://www.chunqiuyiyu.com/hashover/comments.php';
-    script.asyc = true;
 
-    var parent = document.getElementsByClassName('page')[0] || 
-      document.getElementsByClassName('post')[0] || document.body;
-
-    parent.appendChild(script);
-    document.getElementsByClassName('load')[0] && document.getElementsByClassName('load')[0].addEventListener('click', function() {
-      if (document.getElementById('hashoverScript')) {
-        var hashover = new HashOver();
-      }
-    });
-
-    // Go top
-    document.getElementsByClassName('load')[0] && document.getElementsByClassName('top')[0].addEventListener('click', function() {
-      var d = document,
-          dd = document.documentElement,
-          db = document.body,
-          top = dd.scrollTop || db.scrollTop,
-          step = Math.floor(top / 10);
-
-     (function() {
-         top -= step;
-         if (top > -step) {
-             dd.scrollTop == 0 ? db.scrollTop = top: dd.scrollTop = top;
-             setTimeout(arguments.callee, 10);
-         }
-     })();
-    });
-  }
+  // }
 </script>
 <footer>
   &copy; <%= date(new Date(), 'YYYY') %>
@@ -40,3 +8,4 @@
     <%= config.author || '' %>
   </span>
 </footer>
+<%- js('/js/utils.js') %>

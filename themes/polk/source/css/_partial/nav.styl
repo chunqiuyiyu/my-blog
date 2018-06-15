@@ -1,0 +1,97 @@
+.page {  
+  h1 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    border-bottom: 1px solid #000;
+  }
+  
+  .statis {
+    margin-top: 1em;
+  }
+  
+  .search {
+    #local-search-close {
+      cursor: pointer;
+      color: #666;
+      
+      &:hover {
+        color: #000
+      }
+    }
+    
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px dotted;
+      font-size: 1.2em;
+      
+      &:focus {
+        border-bottom: 1px solid #d94240;
+        outline: none;
+      }
+      
+      &:hover {
+        border-bottom: 1px solid #d94240;
+        outline: none;
+      }
+    }
+    
+    #local-search-result {
+      margin-top: 1em;
+    }
+    
+    ul {
+      padding: 0;
+      margin: 0;
+      margin-top: 1em;
+      list-style: none;
+      
+      li {
+        border-bottom: 1px solid #ccc;
+        margin: 1em 0;
+        
+        .search-result-title {
+          border-bottom: 1px dotted;
+          font-weight: bold;
+          
+          &:hover {
+            border-bottom: 1px solid;
+          }
+        }
+      }
+
+      .local-search-empty {
+        color: #d94240;
+      }
+      
+      .search-keyword {
+        color: #d94240;
+        font-style: initial;
+        font-weight: bold;
+        margin: 0 .2em;
+      }
+    }
+  }
+  
+  .tag {
+    .title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: .67em 0;
+    }
+  }
+
+  .tagcloud {
+    a {
+      margin-right: 1em;
+      line-height: 45px;
+      border-bottom: 1px solid gray;
+      white-space: nowrap; 
+      
+      &:hover {
+        border-bottom: 1px dotted;
+      }
+    }
+  }
+
+}
