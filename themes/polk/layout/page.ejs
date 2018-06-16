@@ -16,5 +16,7 @@
     </div>
   <% } %>
 
-<%- js('/js/utils.js') %>
+<% if (page.type !== 'index') { %>
+  <%- js('/js/utils.min.js') %>
+<% } %>
 <%- partial('_partial/footer') %>
