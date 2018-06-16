@@ -13,12 +13,11 @@ rss: /atom.xml
 # SNS config
 sns:
   Blog: /archives
-  GitHub: https://github.com/chunqiuyiyu
   V2EX: https://www.v2ex.com/member/chunqiuyiyu
+  RSS: /atom.xml
 
 # Nav menu
 menu:
-  Home: /
   Archives: /archives
+  Nav: /nav
   About: /about
-  Search: /search
