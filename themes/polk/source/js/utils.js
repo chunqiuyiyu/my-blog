@@ -149,7 +149,7 @@ window.onload = function() {
     }
 
     document.getElementsByClassName('load')[0] && document.getElementsByClassName('load')[0].addEventListener('click', function() {
-        if (HashOver) var hashover = new HashOver();
+        if (HashOver && !document.getElementById('hashoverScript')) var hashover = new HashOver();
     });
 
     // Go top
