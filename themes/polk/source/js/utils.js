@@ -1,4 +1,13 @@
 window.onload = function() {
+    function clearSearch ($resultContent) {
+        // clear search result
+        var btnClose = document.querySelector("#local-search-close");
+        btnClose.onclick = function() {
+            inputArea.value = '';
+            $resultContent.innerHTML = '';
+        };
+    }
+
     var searchFunc = function(path, search_id, content_id) {
         // 0x00. environment initialization
         'use strict';
@@ -6,6 +15,7 @@ window.onload = function() {
         var $input = document.getElementById(search_id);
         var $resultContent = document.getElementById(content_id);
         $resultContent.innerHTML = BTN + "<ul><span class='local-search-empty'>首次搜索，需载入索引文件，请稍候<span></ul>";
+        clearSearch($resultContent);
 
         var xhr = new XMLHttpRequest();
         xhr.open("GET", path, true);
@@ -106,19 +116,14 @@ window.onload = function() {
                     });
                     str += "</ul>";
                     if (str.indexOf('<li>') === -1) {
-                        return $resultContent.innerHTML = BTN + "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词<span></ul>";
+                        $resultContent.innerHTML = BTN + "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词<span></ul>";
+                    } else {
+                        $resultContent.innerHTML = BTN + str;
                     }
-                    $resultContent.innerHTML = BTN + str;
+                    clearSearch($resultContent);
                 });
             }
         };
-
-        // clear search result
-        var btnClose = document.querySelector("#local-search-close");
-        btnClose.addEventListener('click', function() {
-            inputArea.value = '';
-            $resultContent.innerHTML = '';
-        });
     }
 
     var inputArea = document.querySelector("#local-search-input");
