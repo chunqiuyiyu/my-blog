@@ -4,7 +4,7 @@ slug: About
 date: 2018-05-14 15:38:44
 ---
 ## 我是谁
-春秋一语，常用 ID：chunqiuyiyu，前端开发。
+春秋一语，常用 ID：chunqiuyiyu 或 yiyu，前端开发。
 
 ## 了解我
 [书香乾坤赴][1]
