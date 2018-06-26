@@ -6,7 +6,7 @@ tags: [Nodejs, ES6, 音乐]
 
 ## 前言
 
-随着现在频繁地使用 shell，我越发感觉命令行程序的方便与快捷。为了加深自己对命令行程序的理解，我使用 Node.js 开发了一个命令行界面（CLI）的小程序：[Lrcer](https://github.com/chunqiuyiyu/learn-javascript/tree/master/lrcer)，用来下载网易云音乐上自己喜欢的音乐歌词，以下是要点记录。
+随着现在频繁地使用 shell，我越发感觉到命令行程序的方便与快捷。为了加深自己对命令行程序的理解，我使用 Node.js 开发了一个命令行界面（CLI）的小程序：[Lrcer](https://github.com/chunqiuyiyu/learn-javascript/tree/master/lrcer)，用来下载网易云音乐上自己喜欢的音乐歌词，以下是要点记录。
 
 ## 所需依赖
 
