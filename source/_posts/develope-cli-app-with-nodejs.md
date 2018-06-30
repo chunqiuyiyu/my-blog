@@ -1,7 +1,7 @@
 ---
 title: Node.js 开发命令行程序
 date: 2018-06-25 15:44
-tags: [Nodejs, ES6, 音乐]
+tags: [Node.js, ES6, 音乐]
 ---
 
 ## 前言

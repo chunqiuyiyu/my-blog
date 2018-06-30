@@ -150,11 +150,11 @@ window.onload = function() {
 
         var parent = document.getElementsByClassName('page')[0] ||
             document.getElementsByClassName('post')[0] || document.body;
-//         parent.appendChild(script);
+        parent.appendChild(script);
     }
 
     document.getElementsByClassName('load')[0] && document.getElementsByClassName('load')[0].addEventListener('click', function() {
-//         if (HashOver && !document.getElementById('hashover')) var hashover = new HashOver();
+        if (HashOver && !document.getElementById('hashover')) var hashover = new HashOver();
     });
 
     // Go top
