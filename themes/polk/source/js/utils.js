@@ -145,7 +145,7 @@ window.onload = function() {
     if (!document.getElementById('hashoverScript') && document.getElementsByClassName('load')[0]) {
         var script = document.createElement('script');
         script.id = 'hashoverScript';
-        script.src = 'www.chunqiuyiyu.com/hashover/comments.php';
+        script.src = '//www.chunqiuyiyu.com/hashover/comments.php';
         script.asyc = true;
 
         var parent = document.getElementsByClassName('page')[0] ||
