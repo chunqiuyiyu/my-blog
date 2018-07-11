@@ -50,4 +50,6 @@
     <link rel="alternate" href="<%= url_for(theme.rss) %> " title="<%= config.title %>" type="application/atom+xml">
   <% } %>
 
-  <%- css('/css/style.css?v=1.05') %></head>
+  <%- css('/css/style.css?v=1.05') %>
+  <link rel="manifest" href="/manifest.json">
+  </head>
