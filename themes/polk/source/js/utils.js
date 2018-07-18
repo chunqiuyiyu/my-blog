@@ -14,7 +14,7 @@ window.onload = function() {
         var BTN = "<div id='local-search-close'>清空搜索</div>";
         var $input = document.getElementById(search_id);
         var $resultContent = document.getElementById(content_id);
-        $resultContent.innerHTML = BTN + "<ul><span class='local-search-empty'>首次搜索，需载入索引文件，请稍候<span></ul>";
+        $resultContent.innerHTML = BTN + "<ul></ul>";
         clearSearch($resultContent);
 
         var xhr = new XMLHttpRequest();
@@ -22,6 +22,10 @@ window.onload = function() {
         xhr.send();
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
+                // resume input
+                $input.disabled = false;
+                $inputArea.placeholder = '输入关键词以搜索'；
+                
                 var xml = xhr.responseXML;
                 var root = xml.documentElement;
                 var list = root.getElementsByTagName("entry");
@@ -129,6 +133,11 @@ window.onload = function() {
     var inputArea = document.querySelector("#local-search-input");
     if (inputArea) {
         inputArea.onclick = function() {
+            // disable input
+            inputArea.disabled = true;
+            inputArea.style.backgroundColor = 'white';
+            inputArea.placeholder = '首次搜索，需载入索引文件，请稍候';
+
             getSearchFile();
             this.onclick = null
         }
