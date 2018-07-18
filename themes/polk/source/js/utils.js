@@ -5,6 +5,7 @@ window.onload = function() {
         btnClose.onclick = function() {
             inputArea.value = '';
             $resultContent.innerHTML = '';
+            inputArea.placeholder = '搜索';
         };
     }
 
@@ -24,8 +25,9 @@ window.onload = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 // resume input
                 $input.disabled = false;
-                $inputArea.placeholder = '输入关键词以搜索'；
-                
+                $input.placeholder = '输入关键词以搜索';
+                $input.focus();
+
                 var xml = xhr.responseXML;
                 var root = xml.documentElement;
                 var list = root.getElementsByTagName("entry");
