@@ -29,19 +29,20 @@ GitHub：[chunqiuyiyu][6]
 * 2018-06-12 更新 [Hashover][7] 评论系统
 * 2018-05-29 更换虚拟主机，启用 [Webhooks][10] 自动部署博客
 * 2017-09-12 [博客从 Typecho 迁移到 Hexo][9]
-* 2016-04-22 找回写博客的初心
-* 2016-03-24 购买并启用域名：www.chunqiuyiyu.com
+* 2016-03-24 购买域名：www.chunqiuyiyu.com
+* 2015-08-23 [找回写博客的初心][11]
 * 2015-03-02 博客上线，部署于新浪云引擎(SAE)
 
 
-  [1]: http://www.chunqiuyiyu.com/tags/books/
-  [2]: http://www.chunqiuyiyu.com/music/
-  [3]: http://www.chunqiuyiyu.com/tags/word/
-  [4]: http://www.chunqiuyiyu.com/tags/game/
-  [5]: http://www.chunqiuyiyu.com/project/
+  [1]: /tags/books/
+  [2]: /music/
+  [3]: /tags/word/
+  [4]: /tags/game/
+  [5]: /project/
   [6]: https://github.com/chunqiuyiyu
   [7]: https://github.com/jacobwb/hashover-next
   [8]: https://github.com/adtac/commento
-  [9]: http://www.chunqiuyiyu.com/2017/09/migrate-blog-from-typecho-to-hexo.html
+  [9]: /2017/09/migrate-blog-from-typecho-to-hexo.html
   [10]: https://developer.github.com/webhooks/
+  [11]: /2015/08/get-back-to-the-blog-of-the-beginning-of-the-heart.html
   
