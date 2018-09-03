@@ -61,6 +61,7 @@ tag_map:
   游戏: game
   伤感: sadness
   模板: template
+  小说: novel
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
