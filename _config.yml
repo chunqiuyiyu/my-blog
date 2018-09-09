@@ -64,6 +64,7 @@ tag_map:
   小说: novel
   感悟: feelings
   算法: algorithm
+  软件: software
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
