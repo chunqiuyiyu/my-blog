@@ -69,6 +69,7 @@ tag_map:
   武侠: swordman
   美食: food
   诗词: poetry
+  源码: code
   
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
