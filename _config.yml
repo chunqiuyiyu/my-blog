@@ -70,6 +70,7 @@ tag_map:
   美食: food
   诗词: poetry
   源码: code
+  音乐: music
   
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
