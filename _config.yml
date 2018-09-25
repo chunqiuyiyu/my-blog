@@ -71,6 +71,7 @@ tag_map:
   诗词: poetry
   源码: code
   音乐: music
+  UI: ui
   
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
