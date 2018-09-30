@@ -75,6 +75,7 @@ tag_map:
   趣闻: anecdote
   动漫: cartoon
   古典: classical
+  插件: plugin
   
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
