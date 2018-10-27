@@ -80,6 +80,7 @@ tag_map:
   组件: component
   魔幻: magic
   庆祝: celebration
+  工具: tools
   
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
