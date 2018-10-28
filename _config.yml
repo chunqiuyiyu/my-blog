@@ -81,6 +81,7 @@ tag_map:
   魔幻: magic
   庆祝: celebration
   工具: tools
+  生活: life
   
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
