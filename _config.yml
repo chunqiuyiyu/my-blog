@@ -82,7 +82,7 @@ tag_map:
   庆祝: celebration
   工具: tools
   生活: life
-  Node.js: nodejs
+  Node-js: nodejs
   
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
