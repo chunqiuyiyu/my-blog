@@ -12,6 +12,6 @@ tags: [碎语, 生活, 爱恨情仇]
 
 ——2019/1/23 8:58
 
-ninhuizhendejincai，rangerhaoyunconglaidoubuhuijuanguwo。buguo，guangtane，kaixinjiuhao。
+年会非常精彩，然而好运从来都不会眷顾我。不过，管他呢，开心就好。
 
---2019/1/26 21:12
+——2019/1/26 21:12
