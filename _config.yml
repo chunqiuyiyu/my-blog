@@ -114,8 +114,3 @@ feed:
   content:
   content_limit: 140
   content_limit_delim: ' '
-
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type:
