@@ -24,9 +24,9 @@ Switch 并没有想象中的那么好玩，我被欧美游戏洗了脑，过于�
 
 ——2019/1/29 8:49
 
-真让人恶心，等着吧，总有你shoubuliaodeshihou。
+真让人恶心，等着吧，总有你受不了的时候。
 
---2019/2/1 23:20
+——2019/2/1 23:20
 
 laojiahaishiyirujiwandelenga,jitianxiwuyepiaoqilexuehua,gujimeitianhuigengjiahanleng。
 
