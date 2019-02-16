@@ -32,7 +32,7 @@ laojiahaishiyirujiwandelenga,jitianxiwuyepiaoqilexuehua,gujimeitianhuigengjiahan
 
 ——2019/2/2 19:07
 
-xinchunyukuai，chunwankanqilaishiyuelaiyuemeiyisilr。
+新春愉快，春晚看起来是越来越没意思了。
 
 ——2019/2/4 21:29
 
