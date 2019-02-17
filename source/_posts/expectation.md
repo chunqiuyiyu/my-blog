@@ -40,4 +40,8 @@ laojiahaishiyirujiwandelenga,jitianxiwuyepiaoqilexuehua,gujimeitianhuigengjiahan
 
 ——2019/2/6 20:40
 
+人生若只如初见，何事秋风悲画扇。等闲变却故人心，却道故人心易变。
+骊山语罢清宵半，泪雨霖铃终不怨。何如薄幸锦衣郎，比翼连枝当日愿。
+
+——2019/2/17 22:50
 
