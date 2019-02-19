@@ -1,0 +1,24 @@
+<%- partial('_partial/header') %>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">
+      <a href="<%- url_for(page.path) %>"><%= page.title %></a>
+    </h1>
+  </div>
+  <div class="post-meta">
+    <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
+  </div>
+  <div class="post-content">
+    <%- page.content %>
+  </div>
+  <div class="post-footer">
+    <% if (page.tags && page.tags.length){ %>
+      <%- list_tags(page.tags, { show_count: false, class: 'post-tag'}) %>
+    <% } %>
+
+    <a href="#" class="arrow-top">↑</a>
+  </div>
+</article>
+
+<%- partial('_partial/footer') %>
+

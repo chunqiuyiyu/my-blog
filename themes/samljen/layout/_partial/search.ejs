@@ -1,0 +1,40 @@
+<% if (theme.search) { %>
+<div class="search">
+  <h1>
+    <%= __('Search') %>
+  </h1>
+  <input type="text" autocomplete="off"
+         name="search" placeholder="Search for Posts" id="local-search-input">
+  <span class="down">↓</span>
+  <hr />
+  <div>
+    <div id="local-search-result"></div>
+    <div class="details-container">
+    <%
+      let list = _.cloneDeep(site.posts)
+      list = list.sort('date', -1)
+
+      const years = new Set(list.map(item => date(item.date, "YYYY")))
+    %>
+    <% years.forEach(function (item) { %>
+        <details <%- item === date(new Date(), 'YYYY') ? 'open' : '' %>>
+          <summary><%= item %></summary>
+          <%
+            const posts = list.filter(post => date(post.date, "YYYY") === item)
+          %>
+          <div class="archive-container">
+          <% posts.map(entry => { %>
+          <p>
+            <a class="archive-title" href="<%- url_for(entry.path) %>"><%= entry.title %></a>
+            <time class="archive-date"><%= date(entry.date, "YYYY-MM-DD") %></time>
+          </p>
+          <% }) %>
+          <p><a href="javascript:void(0)" class="arrow-top">↑</a></p>
+          </div>
+        </details>
+    <% }) %>
+    </div>
+  </div>
+  <%- js('/js/utils.js') %>
+</div>
+<% } %>
