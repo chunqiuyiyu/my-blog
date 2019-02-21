@@ -45,3 +45,7 @@ laojiahaishiyirujiwandelenga,jitianxiwuyepiaoqilexuehua,gujimeitianhuigengjiahan
 
 ——2019/2/17 22:50
 
+兜兜转转，一些事情又回到了起点。你以为你躲开了，实际上是自欺欺人。
+
+——2019/2/21 21:31
+
