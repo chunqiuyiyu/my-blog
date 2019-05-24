@@ -101,11 +101,6 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: samljen
 
-search:
-  path: search.xml
-  field: post
-  format: html
-
 feed:
   type: atom
   path: atom.xml
