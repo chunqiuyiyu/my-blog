@@ -25,7 +25,7 @@ javascript:(function(){ /* TODO */ })()
 
 ## 安装与使用
 小书签的安装非常简单，有两种方法：
-1. 将承载小书签代码的 `<a>` 标签拖放到浏览器的书签栏中。
+1. 将承载小书签代码的 `<a>` 标签拖放到浏览器的书签栏中
 2. 通过菜单栏中的“书签”->“书签管理器”（以 Chrome 为例）添加新书签
 
 第一种方法适用于从网上安装小书签（**为了安全起见，请不要随意安装并运行网上不受信任的小书签**），提供小书签工具的网站会用一个带有明显样式 `<a>` 标签提醒用户安装；第二种方法适用于自己开发的小书签，在书签添加页面填入小书签的名称和代码。两种方法的使用情况也不一定非要遵循上述规定，完全可以按自己的喜好来。
@@ -38,7 +38,7 @@ javascript:(function(){ /* TODO */ })()
 ```js
 const scriptEl = document.createElement('script');
 scriptEl.src = 'cdn/path/to/third-party.js';
-document.body.append(script)
+document.body.append(scriptEl)
 
 // TODO
 ```
