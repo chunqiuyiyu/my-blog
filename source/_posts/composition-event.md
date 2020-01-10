@@ -1,5 +1,5 @@
 ---
-title: DOM 中的合成事件（CompositionEvent）
+title: DOM 中的 CompositionEvent
 date: 2020-01-04 23:06:15
 tags: [HTML5, ES6, UI]
 ---
@@ -25,11 +25,11 @@ tags: [HTML5, ES6, UI]
 const data = ['apple', 'banana', 'orange', '苹果', '香蕉', '橘子']
 ```
 
-你会发现在输入中文（例如要搜索“苹果”二字）的时候，输入框中首先出现了虚拟字符（拼音输入：'pingguo'，五笔输入：'agjs'，其他输入法类似）。那么问题就来了，因为代码中监听了 `input` 事件，每次键盘输入时都会触发，那么虚拟字符就会影响到匹配的结果。本来想匹配“苹”字开头的数据，结果 'p'（或者 'a'）开头的数据也匹配到了。如何解决这个问题呢？现在就轮到合成事件（CompositionEvent）出马了。
+你会发现在输入中文（例如要搜索“苹果”二字）的时候，输入框中首先出现了虚拟字符（拼音输入：'pingguo'，五笔输入：'agjs'，其他输入法类似）。那么问题就来了，因为代码中监听了 `input` 事件，每次键盘输入时都会触发，那么虚拟字符就会影响到匹配的结果。本来想匹配“苹”字开头的数据，结果 'p'（或者 'a'）开头的数据也匹配到了。如何解决这个问题呢？现在就轮到 CompositionEvent 出马了。
 
 ## 概念
 
-DOM 合成事件表示由于用户间接输入文本而发生的事件，包括以下三种事件：`compositionstart`、`compositionupdate`、`compositionend`。从命名上就可以看出来，这三种事件分别在输入法输入非拉丁字符开始时、更新时、结束（或者取消）时触发。
+DOM 中的 CompositionEvent 表示由于用户间接输入文本而发生的事件，包括以下三种事件：`compositionstart`、`compositionupdate`、`compositionend`。从命名上就可以看出来，这三种事件分别在输入法输入非拉丁字符开始时、更新时、结束（或者取消）时触发。
 
 ```js
 const handler = (e) => console.log(e.type)
@@ -51,7 +51,8 @@ compositionend
 
 ## 解决方案
 
-有了合成事件，上面说到的问题就很容易解决了。我们在 `input` 事件中加入锁（Flag），然后在合成事件开始与结束时开关锁，这样一来，输入法引入的虚拟字符就无法干扰正常的处理流程了。
+了解了 CompositionEvent，上面说到的问题就很容易解决了。我们在 `input` 事件中加入锁（Flag），然后在 
+ CompositionEvent 开始与结束时开关锁，这样一来，输入法引入的虚拟字符就无法干扰正常的处理流程了。
 
 ```js
 let flag = true
