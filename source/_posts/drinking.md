@@ -12,6 +12,6 @@ tags: [碎语, 生活, 爱恨情仇]
 
 ——2020/01/20 23:47
 
-kandaohaopengyouzaihunliwutaishangkaixingdemuyang，zhenshiweitagangdaogaoxing，wulunshishiruhebianhua，woxiwanwomengdeyouyinenggoutianchangdijiu。
+看到好朋友在婚礼舞台上幸福的模样，真是为他感到高兴，无论世事如何变迁，我希望我们的友谊能够天长地久。
 
 —-2020/01/22 23:26
