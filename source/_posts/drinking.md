@@ -40,6 +40,6 @@ tags: [碎语, 生活, 爱恨情仇]
 
 ——2020/02/08 23:56
 
-renqingkeyizuo，danbunengzheyanzuo，zheyangzuoxiaqujiumeiyourenqingle。
+人情可以做，但不能这样做，这样做下去就没有人情了。
 
-—-2020/02/12 23:48
+——2020/02/12 23:48
