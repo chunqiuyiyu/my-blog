@@ -51,9 +51,9 @@ source.connect(analyser);
 analyser.connect(context.destination);
 frameLooper();
 ```
-`frameLooper()`中，用`requestAnimationFrame`实现 60FPS 的循环绘制。使用分析节点的`frequencyBinCount`得到绘制的数据值的数量，用`Uint8Array`储存这些数据。`Uint8Array`数组类型表示一个8位无符号整型数组，创建时内容被初始化为0。相较于普通无类型的`Array`，`Uint8Array`能更加快速高效地存储与处理二进制数据，广泛应用于文件数据以及WebGL中着色器数据的操作中。
+`frameLooper()` 中，用 `requestAnimationFrame` 实现 60FPS 的循环绘制。使用分析节点的 `frequencyBinCount` 得到绘制的数据值的数量，用 `Uint8Array` 储存这些数据。`Uint8Array` 数组类型表示一个 8 位无符号整型数组，创建时内容被初始化为 0。相较于普通无类型的 `Array`，`Uint8Array` 能更加快速高效地存储与处理二进制数据，广泛应用于文件数据以及 WebGL 中着色器数据的操作中。
 
-分析节点`analyser`的`getByteFrequencyData()`方法将当前频率数据复制到传入其中的无符号整型数组。它的`frequencyBinCount`属性是`fftSize`属性的一半。`fftSize`属性的值是一个无符号长整型的值, 用于确定频域的FFT(快速傅里叶变换)的大小，范围是从32到32768内的2的非零幂，其默认值为 2048。所以此时`fbc_array`存储有 1024个 数据，每一个数据就是我们所需要的频率大小。最后在循环中将前 100 个数据绘制到`canvas`中，至此收工。
+分析节点 `analyser` 的 `getByteFrequencyData()` 方法将当前频率数据复制到传入其中的无符号整型数组。它的 `frequencyBinCount` 属性是 `fftSize` 属性的一半。`fftSize` 属性的值是一个无符号长整型的值, 用于确定频域的 FFT（快速傅里叶变换）的大小，范围是从 32 到 32768 内的 2 的非零幂，其默认值为 2048。所以此时 `fbc_array` 存储有 1024 个数据，每一个数据就是我们所需要的频率大小。最后在循环中将前 100 个数据绘制到 canvas` ，至此收工。
 
 ```JavaScript
 requestAnimationFrame(frameLooper);
