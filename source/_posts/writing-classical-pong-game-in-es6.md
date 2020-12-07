@@ -1,5 +1,5 @@
 ---
-title: es6开发经典pong游戏
+title: ES6 开发经典 Pong 游戏
 date: 2017-04-01 23:25
 tags: [游戏, 2D, JavaScript, HTML5]
 ---
@@ -52,6 +52,3 @@ canvas.addEventListener('mousemove', event => {
   [3]: /img/pong.jpg
   [4]: https://github.com/chunqiuyiyu/learn-javascript/tree/master/pong
   [5]: http://www.chunqiuyiyu.com/usr/uploads/demos/pong/index.html
-
-
-
