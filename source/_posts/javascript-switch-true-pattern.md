@@ -1,6 +1,6 @@
 ---
 title: JavaScript 中的 Switch(true) 模式
-date: 2021-05-22 23:51:29
+date: 2021-05-22 23:51
 tags: [ES6, JavaScript]
 ---
 
