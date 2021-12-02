@@ -1,6 +1,6 @@
 ---
 title: Sublime Text 插件开发
-date: 2017-09-19 10:04:07
+date: 2017-09-19 10:04
 tags: [Sublime Text, 插件, Python]
 ---
 
