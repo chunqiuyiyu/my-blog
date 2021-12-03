@@ -1,6 +1,6 @@
 ---
 title: Sublime Text SVG 预览插件开发
-date: 2020-06-02 23:33:14
+date: 2020-06-02 23:33
 tags: [Sublime Text, 插件, Python]
 ---
 
