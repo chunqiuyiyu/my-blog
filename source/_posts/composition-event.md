@@ -1,6 +1,6 @@
 ---
 title: DOM 中的 CompositionEvent
-date: 2020-01-04 23:06:15
+date: 2020-01-04 23:06
 tags: [HTML5, ES6, UI]
 ---
 
