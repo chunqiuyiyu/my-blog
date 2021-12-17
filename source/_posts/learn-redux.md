@@ -1,6 +1,6 @@
 ---
 title: 学习 Redux
-date: 2018-07-12 11:02:00
+date: 2018-07-12 11:02
 tags: [React, Redux, ES6]
 ---
 
